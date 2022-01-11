@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="15dp"
+    >
+
+<!--    <EditText-->
+<!--        android:id="@+id/name"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="25dp"-->
+<!--        android:hint="Vehicle name"-->
+<!--        android:layout_marginBottom="15dp"-->
+<!--        />-->
+<!--    <EditText-->
+<!--        android:id="@+id/reg_no"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:textSize="25dp"-->
+<!--        android:hint="registration number"-->
+<!--        android:layout_marginBottom="15dp"-->
+<!--        />-->
+
+    <Button
+        android:id="@+id/vehicle_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VEHICLE LIST" />
+
+<!--    <Button-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/show_details"-->
+<!--        android:text="vehicle data" />-->
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_vehicle"
+        android:text="ADD VEHICLE" />
+
+    <Button
+        android:id="@+id/track_vehicles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TRACK ALL" />
+
+
+</LinearLayout>
