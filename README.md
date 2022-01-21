@@ -134,10 +134,10 @@ Create the atlas cluster and confluent cluster in same region. The sample payloa
 
 * Create 2 MongoDBAtlasSink connectors with below configurations (Note: If using confluent UI, copy the value from below configurations)
 
-i. Create stream to modify the input data and pass to the topic. Navigate to confluent cloud, click on ksql and editor. Copy paste the below sql commands to create the streams. The topic iot.data should be present before we run the below commands.
+i. Create stream to modify the input data and pass to the topic. Navigate to confluent cloud, click on [ksql](ksql%20scripts) and editor. Copy paste the below sql commands to create the streams. The topic iot.data should be present before we run the below commands. 
 
 
-    create stream stream01
+    create stream iiot_simulated
     (
         "reg_num" varchar,
         "owner" varchar,
@@ -150,7 +150,7 @@ i. Create stream to modify the input data and pass to the topic. Navigate to con
     );
 
 
-    create stream finalStream as select "city", "owner", "reg_num" as "_id", struct("type":='Point', "coordinates":=array["lat", "lon"]) as "location","partition_key" from  stream01 emit changes;
+    create stream finalStream as select "city", "owner", "reg_num" as "_id", struct("type":='Point', "coordinates":=array["lat", "lon"]) as "location","partition_key" from  iiot_simulated emit changes;
 
 
 
