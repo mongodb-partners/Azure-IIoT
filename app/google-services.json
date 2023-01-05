@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:61113945681:android:f44de5b04c3d06230ff270",
         "android_client_info": {
-          "package_name": "com.example.trackerapp"
+          "package_name": "com.example.sensorapp"
         }
       },
       "oauth_client": [

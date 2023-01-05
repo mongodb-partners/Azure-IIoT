@@ -1,4 +1,4 @@
-package com.example.trackerapp;
+package com.example.sensorapp;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.example.trackerapp;
+package com.example.sensorapp;
 
 import android.app.Application;
 import android.util.Log;
@@ -12,12 +12,9 @@ import io.realm.mongodb.sync.ClientResetRequiredError;
 import io.realm.mongodb.sync.SyncConfiguration;
 import io.realm.mongodb.sync.SyncSession;
 
-public class MyApplication extends Application  {
-    String appid = "application-0-gmonu";
-    Double static_lat = 12.9716;
-    Double static_lon = 77.5946;
+public class AppConfigs extends Application  {
+    String appid = "iiot-azure-hwsza";
     App app;
-    String timeline_url = "https://us-west-2.aws.webhooks.mongodb-realm.com/api/client/v2.0/app/application-0-gmonu/service/GetTimeline/incoming_webhook/webhook0"+"?reg_num=";
 
 
     public Realm getAppConfigs() {
@@ -35,12 +32,15 @@ public class MyApplication extends Application  {
                 .build());
         User user = app.currentUser();
         app.login(Credentials.anonymous());
-        String partitionValue = "security";
+        String partitionValue = "sensor";
         assert user != null;
         SyncConfiguration config = new SyncConfiguration.Builder(user, partitionValue)
                 .allowWritesOnUiThread(true)
                 .allowQueriesOnUiThread(true)
                 .build();
+
+
+
         Realm backgroundThreadRealm = Realm.getInstance(config);
         return backgroundThreadRealm;
     }
@@ -48,16 +48,6 @@ public class MyApplication extends Application  {
     public String getAppid() {
         return appid;
     }
-
-    public Double getStatic_lat() {
-        return static_lat;
-    }
-
-    public Double getStatic_lon() {
-        return static_lon;
-    }
-
-    public String getTimeline_url() { return timeline_url; }
 
 
     public App getApp(){
@@ -81,9 +71,6 @@ public class MyApplication extends Application  {
     public void onCreate() {
         super.onCreate();
         Realm.init(this);
-
-
-
     }
 
 }
