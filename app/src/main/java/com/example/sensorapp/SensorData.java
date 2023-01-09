@@ -122,23 +122,27 @@ public class SensorData extends AppCompatActivity implements AdapterView.OnItemC
         System.out.println(sensorData);
         String sensor_detail = "Device id : "+sensorData.get(0) +"\n\ndescription : "+ sensorData.get(1) +"\n\nparent_id : "+sensorData.get(2);
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(SensorData.this);
-        builder.setMessage(""+ sensor_detail);
-        builder.setCancelable(false);
-
-        builder.setPositiveButton("Yes", (DialogInterface.OnClickListener) (dialog, which) -> {
-            Intent intent = new Intent(this, SensorDetail.class);
-            intent.putExtra("key", pos);
-            Log.v("INFO>>","activity started");
-            startActivity(intent);
-        });
-
-        builder.setNegativeButton("OK", (DialogInterface.OnClickListener) (dialog, which) -> {
-            dialog.cancel();
-        });
-
-        AlertDialog alertDialog = builder.create();
-        alertDialog.show();
+//        AlertDialog.Builder builder = new AlertDialog.Builder(SensorData.this);
+//        builder.setMessage(""+ sensor_detail);
+//        builder.setCancelable(false);
+//
+//        builder.setPositiveButton("Yes", (DialogInterface.OnClickListener) (dialog, which) -> {
+//            Intent intent = new Intent(this, SensorDetail.class);
+//            intent.putExtra("key", pos);
+//            Log.v("INFO>>","activity started");
+//            startActivity(intent);
+//        });
+//
+//        builder.setNegativeButton("OK", (DialogInterface.OnClickListener) (dialog, which) -> {
+//            dialog.cancel();
+//        });
+//
+//        AlertDialog alertDialog = builder.create();
+//        alertDialog.show();
+        Intent intent = new Intent(this, SensorDetail.class);
+        intent.putExtra("key", pos);
+        Log.v("INFO>>","activity started");
+        startActivity(intent);
         backgroundThreadRealm.close();
     }
 

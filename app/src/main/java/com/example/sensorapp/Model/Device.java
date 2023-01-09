@@ -75,7 +75,7 @@ public class Device extends RealmObject {
 
     @Override
     public String toString() {
-        return device_id+ " " +device_name;
+        return device_id+ " - " +device_name;
     }
 
     public List<String> returnList() {
