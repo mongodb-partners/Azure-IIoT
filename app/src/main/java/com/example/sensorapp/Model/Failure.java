@@ -6,13 +6,12 @@ import io.realm.annotations.PrimaryKey;
 import org.bson.types.ObjectId;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Failure extends RealmObject {
     @PrimaryKey
     private ObjectId _id;
-
-    private String desc;
 
     private String device_id;
 
@@ -20,16 +19,11 @@ public class Failure extends RealmObject {
 
     private String partition_key;
 
-    private String prediction_values;
-
-    private String ts;
+    private Date ts;
 
     // Standard getters & setters
     public ObjectId getId() { return _id; }
     public void setId(ObjectId _id) { this._id = _id; }
-
-    public String getDesc() { return desc; }
-    public void setDesc(String desc) { this.desc = desc; }
 
     public String getDeviceId() { return device_id; }
     public void setDeviceId(String device_id) { this.device_id = device_id; }
@@ -40,11 +34,8 @@ public class Failure extends RealmObject {
     public String getPartitionKey() { return partition_key; }
     public void setPartitionKey(String partition_key) { this.partition_key = partition_key; }
 
-    public String getPredictionValues() { return prediction_values; }
-    public void setPredictionValues(String prediction_values) { this.prediction_values = prediction_values; }
-
-    public String getTs() { return ts; }
-    public void setTs(String ts) { this.ts = ts; }
+    public Date getTs() { return ts; }
+    public void setTs(Date ts) { this.ts = ts; }
 
     public Failure() {}
 
@@ -57,9 +48,7 @@ public class Failure extends RealmObject {
         List<String> deviceData = new ArrayList();
         deviceData.add(device_id);
         deviceData.add(failure);
-        deviceData.add(desc);
-        deviceData.add(prediction_values);
-        deviceData.add(ts);
+        deviceData.add(String.valueOf(ts));
         return deviceData;
     }
 }

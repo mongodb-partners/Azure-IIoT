@@ -81,8 +81,6 @@ public class SensorDetail extends AppCompatActivity {
             System.out.println(html);
             webview.loadDataWithBaseURL("https://charts.mongodb.com/", html, "text/html", "UTF-8", null);
 
-
-
         }
 
     }
