@@ -19,6 +19,7 @@ import android.content.DialogInterface;
 import com.example.sensorapp.Model.Device;
 import com.example.sensorapp.Model.Failure;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -92,13 +93,20 @@ public class SensorData extends AppCompatActivity implements AdapterView.OnItemC
 
 
 
+
         /* ToDo : Get the change document and display on Failure */
         failures.addChangeListener(new RealmChangeListener<RealmResults<Failure>>() {
             @Override
             public void onChange(RealmResults<Failure> failure_data) {
                 // Test: Dialog for failure alert
+                System.out.println(">>>>>>>>>>>>>>>>>>>>>>>@@@@@@@@@@@@@@@@<<<<<<<<<<<<<<<<<<");
+                System.out.println(">>>>>>>>>>>>>>>>>>>>>>>@@@@@@@@@@@@@@@@<<<<<<<<<<<<<<<<<<");
+                System.out.println(failure_data.last());
+                System.out.println(failure_data.last());
+                System.out.println(">>>>>>>>>>>>>>>>>>>>>>>@@@@@@@@@@@@@@@@<<<<<<<<<<<<<<<<<<");
+                System.out.println(">>>>>>>>>>>>>>>>>>>>>>>@@@@@@@@@@@@@@@@<<<<<<<<<<<<<<<<<<");
                 AlertDialog.Builder builder = new AlertDialog.Builder(SensorData.this);
-                builder.setMessage(""+ "Failure :" + String.valueOf(failure_data));
+                builder.setMessage(""+ "Failure :" + String.valueOf(failure_data.last().getFailure())+ "\nDevice ID: "+ String.valueOf(failure_data.last().getDeviceId())+"\nOccurred On: "+ String.valueOf(failure_data.last().getTs()));
                 builder.setCancelable(false);
                 builder.setNegativeButton("OK", (DialogInterface.OnClickListener) (dialog, which) -> {
                     dialog.cancel();
