@@ -1,0 +1,19 @@
+<div class="login-page">
+    <link rel="stylesheet" href="main.css">
+    <h1>
+        IoT Data Simulator
+    </h1>
+    <div class="form">
+        <form action="/connect" method="post" class="login-form">
+            <!-- <input name="host" id="f1c1fba3af154c0ab45d23438110bc15.s2.eu.hivemq.cloud" type="text" placeholder="host" /> -->
+            <!-- <input name="username" id="utsav.talwar@mongodb.com" type="text" placeholder="username" />
+            <input name="password" id="test12345" type="password" placeholder="password" />
+            <input name="port" id="8883" type="number" placeholder="port" /> -->
+            <label class="label">IoT Hub Connection String</label>
+            <input name="connectionString" value="HostName=iiotdemo.azure-devices.net;DeviceId=iiot-demo-device;SharedAccessKey=DMU9/e2fieif1AFiER6dv/KMBqvRwPW97MjZTpPgrr8=" type="text" placeholder="IoT Hub connection string" />
+            <!-- <input name="topic" id="test_sub" type="text" placeholder="topic" /> -->
+            <input type="submit" class="submit" value="Push Data"/>
+        </form>
+    </div>
+
+</div>
