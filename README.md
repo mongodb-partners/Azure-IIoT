@@ -1,0 +1,1 @@
+This repo defines different modules which can help build a robust Smart Factory with a combined effort from MongoDB and Azure.
