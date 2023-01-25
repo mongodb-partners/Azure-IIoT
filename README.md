@@ -81,6 +81,10 @@ print(res.acknowledged)
 
 Follow this [guide](https://www.mongodb.com/developer/products/realm/introduction-realm-sdk-android/) to setup the [mobile application](https://github.com/mongodb-partners/Azure-IIoT/blob/main/android-app/). 
 
+- Once running, the application can push failure notifications like this.
+
+<img width="281" alt="image" src="https://user-images.githubusercontent.com/114057324/214549190-11c2bed7-5bf1-4328-af6d-39cca28ab7e6.png">
+
 #### 7. Charts
 - The real time data can be analysed using various charts available under MongoDB Charts.
 
