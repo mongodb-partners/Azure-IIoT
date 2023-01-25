@@ -83,7 +83,7 @@ Follow this [guide](https://www.mongodb.com/developer/products/realm/introductio
 
 - Once running, the application can push failure notifications like this.
 
-<img width="281" alt="image" src="https://user-images.githubusercontent.com/114057324/214549190-11c2bed7-5bf1-4328-af6d-39cca28ab7e6.png">
+<img width="220" alt="image" src="https://user-images.githubusercontent.com/114057324/214549782-c7a97f60-f738-45bb-aedb-f99107f9c909.png">
 
 #### 7. Charts
 - The real time data can be analysed using various charts available under MongoDB Charts.
