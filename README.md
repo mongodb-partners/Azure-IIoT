@@ -23,7 +23,7 @@ The overall architecture is shown below
 ## Steps to replicate 
 
 #### 1. Failure detection ML model 
-- A ML model can be trained to detect if a failure occurs and predict its type. This can help in reducing the time to diagnose the machine and finding its root cause.
+- A ML model can be trained using MongoDB as a feature store, in order to detect if a failure occurs and predict its type. This can help in reducing the time to diagnose the machine and finding its root cause.
 - Refer this [notebook](https://github.com/mongodb-partners/Azure-IIoT/blob/main/ml-model/fraud-detection.ipynb) to train your ML model.
 - Once the model is trained, you can use `pickle` module to convert the model as binary and store it in MongoDB. 
 ```
