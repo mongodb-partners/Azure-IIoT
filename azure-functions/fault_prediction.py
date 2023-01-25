@@ -10,6 +10,7 @@ def tranform(data):
     try:
         del data['device_id']
         df_inputdata = pd.DataFrame([data])
+        # Convert all columns as float
         df_inputdata[['Air temperature','Process temperature','Rotational speed','Torque','Tool wear']] = df_inputdata[['Air temperature','Process temperature','Rotational speed','Torque','Tool wear']].astype(float)
         df_inputdata = df_inputdata[['Type', 'Air temperature', 'Process temperature', 'Rotational speed','Torque', 'Tool wear']]
         return df_inputdata 
@@ -26,14 +27,16 @@ def find_latest(client):
 def add_latest_failure(client, prediction, device_id):
     db = client['IOT']
     collection = db['Failure']
+    # Different failure categories
     failures = ['No Failure', 'Power Failure', 'Tool Wear Failure','Overstrain Failure', 'Random Failures','Heat Dissipation Failure']
-    print(device_id)
+    # Below document will be inserted in failure collection.
     failure_doc = {
         "device_id" : device_id,
         "failure" : failures[prediction],
         "ts": datetime.datetime.utcnow(),
         "partition_key" : "sensor"
     }
+    # Insert into MongoDB 
     doc = collection.insert_one(failure_doc)
     return doc
 
@@ -43,9 +46,9 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         logging.info('Python HTTP trigger function processed a request.')
         print("HTTP Trigger")
 
-        client = pymongo.MongoClient("mongodb+srv://main_user:test123@demo-cluster.fmxyq.mongodb.net/test")
-        db = client['IIOT']
-        coll = db['models']
+        client = pymongo.MongoClient("<mongodb connection string>") # Update with your connection string 
+        db = client['<database>']
+        coll = db['<collection for storing model>']
 
         # Find data from model dump
         model_out = coll.find_one({"tag": "DecisionTree"})
@@ -57,7 +60,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
         df = tranform(data)
         prediction = model_bin.predict(df)
         print("pred {}".format(prediction))
-        # Update for latest 
+        # If prediction encounters a failure add to failure collection, otherwise skip insertion. 
         if prediction[0] > 0:
             add_latest_failure(client, prediction[0], device_id)
             return func.HttpResponse("Inserted latest failure")
