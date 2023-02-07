@@ -18,7 +18,8 @@ The overall architecture is shown below
 
 
 ## Architecture
-![image](https://user-images.githubusercontent.com/114057324/214538847-f2665d63-1617-4a99-ba8c-b0974403f0e7.png)
+<img width="1341" alt="image" src="https://user-images.githubusercontent.com/114057324/217302587-de744ef3-3a94-4ee7-b686-ffaae2958b9b.png">
+
 
 ## Steps to replicate 
 
