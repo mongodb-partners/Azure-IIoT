@@ -80,7 +80,7 @@ print(res.acknowledged)
 #### 6. Realm - Device Sync Mobile Application 
 - Android application helps in keeping the user notified about any failures that may happen in the factory.
 
-Follow this [guide](https://www.mongodb.com/developer/products/realm/introduction-realm-sdk-android/) to setup the [mobile application](https://github.com/mongodb-partners/Azure-IIoT/blob/main/android-app/). 
+Follow this [guide](https://www.mongodb.com/developer/products/realm/introduction-realm-sdk-android/) to setup the [mobile application](https://github.com/mongodb-partners/Azure-IIoT/blob/main/realm-app/). 
 
 - Once running, the application can pull failure notifications captured by ML Model.
 
