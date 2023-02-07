@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/inter"
+        android:textColor="@color/black"
+        android:text="New"
+        android:textStyle="bold"
+        android:textSize="22sp">
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/new_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="280sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="60dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/all_done_img"
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:src="@drawable/ic_baseline_fact_check_24"
+        android:layout_marginTop="60dp">
+
+    </androidx.appcompat.widget.AppCompatImageView>
+    <TextView
+        android:id="@+id/all_done_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280sp"
+        android:text="Yay! Everything Is Under Control"
+        android:textStyle="italic"
+        android:textSize="18sp"
+        android:textColor="@color/mongo_green"
+        android:visibility="visible"
+        android:gravity="center">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/nothing_present_img"
+        android:layout_width="match_parent"
+        android:layout_height="280sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="431dp"
+        android:src="@drawable/ic_baseline_done_all_24">
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/new_recycler"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="390dp"
+        android:fontFamily="@font/inter"
+        android:text="Acknowledged"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ack_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="280sp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="430dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <Button
+        android:id="@+id/back_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="3dp"
+        android:text="Back"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

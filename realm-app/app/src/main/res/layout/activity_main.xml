@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="15dp"
+    >
+
+    <TextView
+        android:id="@+id/curr_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_name"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/poppins"
+        android:textSize="12sp" />
+
+    <ImageButton
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="#FFFF"
+        android:padding="4dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/next"
+        android:src="@drawable/ic_baseline_power_settings_new_24" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/logout_text"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/logout"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_marginTop="0dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:fontFamily="@font/ubuntu"-->
+<!--        android:text="logout"-->
+<!--        android:textSize="12sp" />-->
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="0dp"
+        android:fontFamily="@font/ubuntu"
+        android:text="@string/username"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/view2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="125dp"
+        android:foreground="@drawable/bg_roundrect_ripple_light_border"
+        app:cardCornerRadius="180dp">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/profile_pic" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/alert_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/failure_pie"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toStartOf="@+id/vehicle_details"
+        android:fontFamily="@font/ubuntu"
+        android:text="My Alerts"
+        android:textColor="@color/dark_text"
+        android:textSize="22sp" />
+
+    <ImageButton
+        android:id="@+id/vehicle_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/failure_pie"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="9dp"
+        android:paddingLeft="40dp"
+        android:backgroundTint="#FFFF"
+        android:contentDescription="@string/next"
+        android:layout_marginBottom="-8dp"
+        android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+    <WebView
+        android:id="@+id/failure_pie"
+        android:layout_width="396dp"
+        android:layout_height="334dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0dp"
+        android:scrollbars="none" >
+
+    </WebView>
+
+</RelativeLayout>
