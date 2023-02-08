@@ -56,7 +56,7 @@ print(res.acknowledged)
 
 - Start the service using `node app.js`, and input the primary connection string copied in previous step to establish connection.
 
-![image](https://user-images.githubusercontent.com/114057324/214539115-1b2a2eb7-4092-495e-89f9-23151924b536.png)
+<img width="638" alt="image" src="https://user-images.githubusercontent.com/114057324/217431536-80248911-a78f-47ba-9f89-cef8ae99f3f2.png">
 
 #### 4. Stream Analytics
 - Once the data reaches IoT Hub, it can then be served to Stream Analytics for filtering and pushing to MongoDB Atlas.
