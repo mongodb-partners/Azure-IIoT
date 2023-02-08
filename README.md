@@ -93,7 +93,7 @@ Follow this [guide](https://www.mongodb.com/developer/products/realm/introductio
 
 - Refer this [link](https://www.mongodb.com/docs/charts/welcome-experience/) for setting up one for yourself and you can build awesome charts like this.
 
-![image](https://user-images.githubusercontent.com/114057324/214540397-b56dd2fa-f295-4ec7-8702-d45bf056223a.png)
+<img width="1330" alt="image" src="https://user-images.githubusercontent.com/114057324/217430914-5ef9763a-e274-4510-a817-3af098fc65ab.png">
 
 
 ## Conclusion
